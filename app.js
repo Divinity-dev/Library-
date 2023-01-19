@@ -1,9 +1,11 @@
 /* eslint-disable no-plusplus */
 let Books = [];
-const book = {
-  Title: '',
-  Author: '',
-};
+class Book {
+  constructor(author, Title) {
+    this.author = author;
+    this.Title = Title;
+  }
+}
 let index = 0;
 const title = document.getElementById('title');
 const Author = document.getElementById('author');
@@ -16,12 +18,11 @@ function renderbooks() {
   if (localStorage.getItem('Data') !== null) {
     Books = JSON.parse(localStorage.getItem('Data'));
     document.getElementById('listitems').innerHTML = '';
-    Books.forEach((book) => {
-      document.getElementById('listitems').innerHTML += `<p>
-  ${book.Title} <br> ${book.Author} <br>
-  <button class="remove-btn" id = ${index++}>remove</button> <br>
-  <hr>
-  </p>`;
+    Books.forEach((bookitem) => {
+      document.getElementById('listitems').innerHTML += `<tr>
+      <td>"${bookitem.Title}" by ${bookitem.author}</td>
+      <td><button class='remove-btn' id=${index++}>remove</button></td>
+  </tr>`;
     });
   }
 }
@@ -29,11 +30,10 @@ renderbooks();
 
 document.getElementById('add-btn').onclick = (e) => {
   e.preventDefault();
-  book.Title = title.value;
+  const bookitem = new Book(Author.value, title.value);
+  Books.push(bookitem);
   title.value = '';
-  book.Author = Author.value;
   Author.value = '';
-  Books.push(book);
   ToLocalStorage();
   // eslint-disable-next-line no-plusplus
   renderbooks();
