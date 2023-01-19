@@ -12,6 +12,19 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+table {
+  border: 1px solid #000;
+  width: 40%;
+}
+
+tr {
+  display: flex;
+  justify-content: space-between;
 }
 
 form {
@@ -20,6 +33,8 @@ form {
   width: 100%;
   margin-top: 20px;
   align-items: center;
+  position: absolute;
+  top: 400px;
 }
 
 input {
