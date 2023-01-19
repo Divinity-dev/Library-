@@ -2,19 +2,67 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  list-style: none;
   font-family: sans-serif;
 }
 
-.books {
-  text-align: center;
+.li {
+  border-right: 1px solid #000;
+  padding-right: 10px;
+}
+
+.contact {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+  border: 2px solid #000;
+  width: 95%;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  color: black;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+.nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li:hover {
+  color: rgb(119, 119, 235);
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form button {
+  margin-left: 340px;
+  margin-top: 20px;
 }
 
 table {
@@ -33,22 +81,12 @@ form {
   width: 100%;
   margin-top: 20px;
   align-items: center;
-  position: absolute;
-  top: 400px;
 }
 
 input {
   margin: 10px 0;
-  width: 10%;
+  width: 30%;
   padding: 2px;
-}
-
-ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 10px;
-  color: black;
 }
 
 ul li h2 {
@@ -60,4 +98,27 @@ ul li h2 {
 hr {
   margin-top: 10px;
   width: 100%;
+}
+
+.list1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  display: none;
+}
+
+.footer {
+  width: 95%;
+  border: 1px solid #000;
+  margin-left: 25px;
+  position: absolute;
+  bottom: 0;
+}
+
+.contact h2 {
+  margin: 20px 0;
 }
