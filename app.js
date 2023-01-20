@@ -71,3 +71,18 @@ document.querySelectorAll('.remove-btn').forEach((btn) => {
     window.location.reload();
   });
 });
+document.getElementById('add').onclick = () => {
+  document.getElementById('list1').classList.add('close');
+  document.getElementById('contact').classList.add('close');
+  document.getElementById('form').classList.remove('close');
+};
+document.getElementById('list').onclick = () => {
+  document.getElementById('list1').classList.remove('close');
+  document.getElementById('form').classList.add('close');
+  document.getElementById('contact').classList.add('close');
+};
+document.getElementById('contact1').onclick = () => {
+  document.getElementById('list1').classList.add('close');
+  document.getElementById('form').classList.add('close');
+  document.getElementById('contact').classList.remove('close');
+};
